@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <title>Sophia Ko個人作品集</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, user-scalable=no">
+  
+  <!-- SEO -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta property="og:url" content=""/>
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" /> 
+  <meta property="og:image" content=""/>
+  <meta name="theme-color" content="#000000">
+  <link rel="shortcut icon" href="img/webicon.ico"/>
+  
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/font.css" type="text/css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/main.css" type="text/css">
+  
+  <!-- JS -->
+  <script src="js/module/jquery-3.5.1.min.js"></script>
+  <script src="js/module/vue.js"></script>
+  <script src="js/module/wow.js"></script>
+</head>
+
+<div id="menu" :class="{ active : burgerActive }">
+  <div class="burger" 
+      @click="burgerActive = !burgerActive"
+      :class="{ active : burgerActive }">
+      <div></div>
+      <div></div>
+      <div></div>
+  </div>
+  <ul class="menu-list">
+      <li v-for="item in list" :key="item.en">
+          <a :href="item.url" 
+              :title="item.title" 
+              :class="{ active: item.isActive }">
+              <div class="icon-box dfc"><i :class="item.icon"></i></div>
+              <span>{{ item.en }}</span>
+          </a>
+      </li>
+  </ul>
+</div>
+
+
+
+<script>
+$(function(){
+    $('#menu').find('ul.menu-list').find('li').eq(0).addClass('active');
+});
+</script>
+
+
+<!-- ----------------------------------------------- -->
+
+<div class="container">
+      <div class="note-wrap">
+        <div class="title-wrap">
+            <h1 class="title">個人簡介</h1>
+        </div>
+        <div class="personal edit-block wow animate__fadeInUp">
+            <div class="dfc">
+                <div class="imgbox"><img src="img/head.jpg" alt="個人頭像"></div>
+                <h2 class="tac bold">柯翠茹<span>Sophia Ko</span></h2>
+                <div class="tag text-center" style="margin-bottom: 12px;"><span>無全職工作</span></div>
+                <h5 class="tac bold">資深前端工程師</h5>
+                <ul class="contact">
+                    <li><i class="icon-map"></i>台中市,北區</li>
+                    <li><i class="icon-mail"></i><a href="mailto:s88431ss@gmail.com.tw" target="_blank">s88431ss@gmail.com.tw</a>
+                    <br>
+                    <span class="note">(每天收信)</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="fontbox">
+                <div class="tag"><span>經歷</span></div>
+                <ul class="preset">
+                  <li>1年網頁設計經驗，3年前端工程師經驗。</li>
+                </ul>
+                <div class="tag"><span>性格特質</span></div>
+                <ul class="preset">
+                  <li>自學能力強，喜歡吸收新知，有獨立作業能力。</li>
+                  <li>細心認真，熱愛優化流程，增加效率及使用者體驗。</li>
+                  <li>擅長溝通協調，擁有豐富大型專案經驗，可協助釐清並優化專案流程。</li>
+                  <li>擅長抓出重點資訊進行分析，將需求轉譯為工程師語言，加速溝通過程。</li>
+                </ul>
+                <div class="tag"><span>希望待遇</span></div>
+                <ul class="preset">
+                  <li>希望職務：前端網頁開發、UI/UX設計、專案流程優化</li>
+                  <li>希望工作形式：遠端/外包</li>
+                  <li>希望薪資範圍：年薪60萬以上/論件計酬</li>
+                </ul>
+                <ul class="btnlist">
+                    <p class="bold">快速連結</p>
+                    <li><a href="portfolio.html" class="btn">網站作品集</a></li>
+                    <li><a href="#skill" class="btn anchor">專業技能</a></li>
+                    <li><a href="#experience" class="btn anchor">經歷</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <span id="skill"></span>
+        <h2 class="subtitle tac">專業技能</h2>
+        <div class="edit-block wow animate__fadeInUp">
+            <ul class="skill-list">
+                <li>
+                    <div class="icon-box">
+                        <i class="icon-tool"></i>
+                        <h5>開發工具</h5>
+                    </div>
+                    <ul class="preset">
+                        <li>
+                          PhotoShop
+                          <span class="note">開版設計用</span>
+                        </li>
+                        <li>
+                          Illustrator
+                          <span class="note">調整SVG向量檔</span>
+                        </li>
+                        <li>
+                          <a href="https://www.canva.com/" target="_blank">Canva</a>
+                          <span class="note">快速製作各式圖檔或短影片</span>
+                        </li>
+                        <li>
+                          <a href="https://www.figma.com/" target="_blank">Figma</a>
+                          <span class="note">利用雲端系統直接在網頁上製作設計稿</span>
+                        </li>
+                        <li>
+                          <a href="https://www.notion.so/product" target="_blank">Notion</a>
+                          <span class="note">製作待辦清單、進行專案管理</span>
+                        </li>
+                        <li><a href="https://code.visualstudio.com/" target="_blank" title="Visual Studio Code官網">Visual Studio Code</a>
+                          <span class="note">平時作業環境，有多種便利的插件幫助增加作業效率</span>
+                        </li>
+                        <li><a href="https://git-scm.com/" target="_blank" title="Git官網">Git</a>
+                          <span class="note">版本控制，搭配SourceTree使用</span>
+                        </li>
+                        <li><a href="https://nodejs.org/en/" target="_blank" title="Node.js官網">Node.js</a>
+                          <span class="note">僅用來架設環境</span>
+                        </li>
+                        <li><a href="https://www.npmjs.com/get-npm" target="_blank" title="npm官網解說">npm</a>
+                          <span class="note">下載便利套件</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="icon-box">
+                        <i class="icon-code"></i>
+                        <h5>程式語言</h5>
+                    </div>
+                    <ul class="preset">
+                        <li>HTML5/CSS3
+                          <span class="note">SASS/SCSS/less均可，平常使用SCSS或less。<br>
+                          會使用$變數、@mixin、@import等方式管理css style。</span>
+                        </li>
+                        <li>Javascript(ES6/ES7)
+                          <span class="note">可靈活運用原生js撰寫新功能</span>
+                        </li>
+                        <li>Vue.js
+                          <span class="note">平常工作使用的框架(前後端分離)，會搭配JSX寫法進行render。<br/>熟悉Vue Cli、VueX、Vue Router、生命週期。</span>
+                        </li>
+                        <li>RESTful API
+                          <span class="note">前後端分離串接API</span>
+                        </li>
+                        <li>JSON
+                          <span class="note">理解物件擺放規則，可調用外部資料</span>
+                        </li>
+                        <li>
+                          php
+                          <span class="note">會使用一些簡單的指令，早期在網頁設計公司與後端合作的寫法(前後端混雜)</span>
+                        </li>
+                        <li>
+                          React.js
+                          <span class="note">僅個人學習時建立過小型專案，熟悉JSX寫法</span>
+                        </li>
+                        <li>
+                          Python
+                          <span class="note">僅在閒暇時自學，能夠自己寫出小習題並加入錯誤判斷，沒有實際參與專案經驗</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="icon-box">
+                        <i class="icon-skill"></i>
+                        <h5>專業技能</h5>
+                    </div>
+                    <ul class="preset">
+                        <li>網站設計規劃
+                          <span class="note">依照合約內容及客戶需求規劃網站內容、設計版面</span>
+                        </li>
+                        <li>協助釐清專案需求
+                          <span class="note">良好的溝通能力，引導客戶或團隊夥伴確定任務目標</span>
+                        </li>
+                        <li>前端互動效果
+                          <span class="note">用套件快速建立基本動畫效果，有特殊需求也可自行撰寫js配合</span>
+                        </li>
+                        <li>RWD網頁切版
+                          <span class="note">網站在桌電、平板、手機各解析度都能完美展示</span>
+                        </li>
+                        <li>UI/UX設計流程優化
+                          <span class="note">擅長優化介面及操作流程，讓網站使用上更加直覺</span>
+                        </li>
+                        <li>瀏覽器、不同客戶端兼容性
+                          <span class="note">網站在常見瀏覽器(Chrome、Safari、Firefox、Edge)及常見品牌手機上都能正常運作</span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <span id="experience"></span>
+        <h2 class="subtitle tac">經歷</h2>
+        <div class="edit-block wow animate__fadeInUp">
+            <ul class="skill-list">
+                <li>
+                    <div class="icon-box">
+                        <i class="icon-work"></i>
+                        <h5>工作經歷</h5>
+                    </div>
+                    <ul class="preset">
+                        <li><a href="https://www.rapixus.com/" target="_blank">瑞思資訊股份有限公司</a>
+                          <span class="note">2021/3 - 2024/2<br/>
+                            前端工程師<br/>
+                            <ul>
+                              <li>全權負責公司過去兩年的主要營收項目（VANS）</li>
+                              <li>優化後台整體形象及重新規劃流程，使公司產品 RapixEngine 在一年內成為同業中 UI/UX 最優質的品項</li>
+                            </ul>
+                          </span>
+                        </li>
+                        <li><a href="https://www.maya.com.tw/" target="_blank">瑪雅網路設計</a>
+                          <span class="note">2020/1 - 2021/2<br>
+                            網頁設計師
+                          </span>
+                        </li>
+                        <li><span class="note">不相關的工作經歷暫不列入此頁，有興趣請見人力銀行內履歷資料。</span></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="icon-box">
+                        <i class="icon-project"></i>
+                        <h5>參與專案</h5>
+                    </div>
+                    <ul class="preset">
+                        <li>
+							協助公司首次參展<a href="https://cybersec.ithome.com.tw/landingPage/" target="_blank">資安大會</a>
+							<span class="note">
+								<ul>
+									<li>時間：2023年3~5月</li>
+									<li>現場活動企劃、活動流程規劃、場地規劃、主視覺指導</li>
+									<li>輔銷品選擇+設計+送印、DM設計</li>
+									<li>公司介紹、產品介紹影片企劃+外包(<a href="https://www.rapixus.com/product_detail.php?id=34" target="_blank">影片連結</a>)</li>
+									<li>現場活動攝影流程規劃+外包(<a href="https://www.rapixus.com/news_detail.php?id=54" target="_blank">影片連結</a>)</li>
+									<li>現場平板影片放映用網頁製作</li>
+									<li>公司制服外包</li>
+								</ul>
+							</span>
+						</li>
+                        <li>
+                          <a href="portfolio.html">RapixEngine後台風格翻新</a>
+                          <span class="note">
+                            時間：2022下半年<br>
+                            負責：配合新官網風格翻新公司產品後台風格，制定新色票表，優化產品功能
+                          </span>
+                        </li>
+                        <li><a href="https://www.twisc.nchu.edu.tw/ncsu-cloud" target="_blank">C級學校聯合服務</a>
+                          <span class="note">
+                            <ul>
+                              <li>時間：2022年10月</li>
+                              <li>負責：網站設計、DM設計、網頁切版(純html)</li>
+                              <li>專案名稱：資通安全弱點通報機制(VANS) - C級學校聯合服務</li>
+                              <li>合作對象：中興大學(異業合作項目)</li>
+                            </ul>
+                          </span>
+                        </li>
+                        <li><a href="https://www.rapixus.com/" target="_blank">瑞思資訊官網翻新</a>
+                          <span class="note">
+                            時間：2022年中<br>
+                            負責：監督委外廠商確定風格，製作產品圖等自行上架內容、優化SEO
+                          </span>
+                        </li>
+                        <li><a href="https://www.rapixus.com/product_detail.php?id=30" target="_blank">RapixEngine(RXE) VANS 資安弱點通報系統模組</a>
+                          <span class="note">
+                            時間：2021年中<br>
+                            負責：模組功能流程規劃、前端UI製作及API串接
+                          </span>
+                        </li>
+                        <li><a href="http://mayawork.com.tw/2020chumbuddy/" target="_blank">濟稻網站翻新</a>
+                          <span class="note">
+                            時間：2021年2月<br>
+                            負責：介面規劃、網站設計、網頁切版
+                          </span>
+                        </li>
+                        <li><a href="https://www.vajra.tw/" target="_blank">壇城網站設計</a>
+                          <span class="note">
+                            時間：2021年1月<br>
+                            負責：介面規劃、網站設計、網頁切版
+                          </span>
+                        </li>
+                        <li><a href="http://www.mayawork.com.tw/2020radm/" target="_blank">瑞門網站翻新</a>
+                          <span class="note">
+                            時間：2020年12月<br>
+                            負責：介面規劃、網站設計、網頁切版
+                          </span>
+                        </li>
+                        <li><a href="https://www.deanyen.com/" target="_blank">鼎言網站設計</a>
+                          <span class="note">
+                            時間：2020年11月<br>
+                            負責：介面規劃、網站設計、網頁切版
+                          </span>
+                        </li>
+                        <li><a href="https://www.shiangming.com/" target="_blank">祥明診所網站設計</a>
+                          <span class="note">
+                            時間：2020年7月<br>
+                            負責：介面規劃、網站設計、網頁切版
+                          </span>
+                        </li>
+                        <li><a href="https://www.dajun88.com/" target="_blank">大鈞診所,大川診所網站翻新</a>
+                          <span class="note">
+                            時間：2020年5月<br>
+                            負責：介面規劃、網站設計、網頁切版
+                          </span>
+                        </li>
+                    </ul>
+                    <br>
+                    <p class="tac"><a href="portfolio.html" class="btn">作品集一覽</a></p>
+                </li>
+                <li>
+                    <div class="icon-box">
+                        <i class="icon-book"></i>
+                        <h5>學歷</h5>
+                    </div>
+                    <ul class="preset">
+                        <li>逢甲大學
+                          <span class="note">2011/9 - 2016/06<br>
+                            化學工程系
+                          </span>
+                        </li>
+                        <li>豐原高中
+                          <span class="note">2008/9 - 2011/6<br>
+                            普通科
+                          </span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+      </div>
+      
+  </div>
+
+<!-- ----------------------------------------------- -->
+
+<div id="footer">
+  <div id="gotop"><i class="icon-gotop"></i></div>
+  <div class="container">
+      <ul class="footer-contact">
+          <li>柯翠茹 - Sophia Ko</li>
+          <li><i class="icon-mail"></i><a href="mailto:s88431ss@gmail.com.tw" target="_blank">s88431ss@gmail.com.tw</a></li>
+      </ul>
+  </div>
+</div>
+
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
