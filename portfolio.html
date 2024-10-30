@@ -61,6 +61,9 @@ $(function(){
 
 <div class="portfolio-wrap container">
   <h1 class="title tac">參與專案一覽</h1>
+  <div class="back-wrap">
+    <a href="/index.html" class="back-btn"><i class="icon-gotop"></i>返回首頁</a>
+  </div>
   <ul class="portfolio-list">
       <li v-for="item in info" :key="item.name">
           <a href="javascript:void(0);" :title="item.name" @click="handleOpen(item)">
@@ -126,7 +129,7 @@ new Vue({
           url: 'https://www.twisc.nchu.edu.tw/ncsu-cloud',
           date: '2022/10',
           innerActive: false,
-          content: `專案名稱：資通安全弱點通報機制(VANS) - C級學校聯合服務<br>合作對象：中興大學(異業合作項目)<br><br>目前任職公司(瑞思資訊)與中興大學的異業合作案，我負責此案的整體風格設計，並配合設計DM、網站等。<br>因此案是將網頁提供給對方置入，避免更新麻煩就採用單html檔的方式完成案件(圖片轉base64)。`
+          content: `專案名稱：資通安全弱點通報機制(VANS) - C級學校聯合服務<br>合作對象：中興大學(異業合作項目)<br><br>瑞思資訊與中興大學的異業合作案，我負責此案的整體風格設計，並配合設計DM、網站等。<br>因此案是將網頁提供給對方置入，避免更新麻煩就採用單html檔的方式完成案件(圖片轉base64)。`
         },
         {
           imgurl: 'img/rapix.jpg',
