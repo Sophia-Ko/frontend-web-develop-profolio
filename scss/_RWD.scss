@@ -1,205 +1,192 @@
 @media screen and (max-width: 1024px) {
-
-#menu{
-    width: 100%;
-    height: auto;
-    padding: 0 20px;
-    background: #000;
-    .burger{display: none;}
-    ul.menu-list{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        li{
-            width: calc(100% / 3);
-            margin-bottom: 0;
-            border-right: 1px solid #999;
-            &:last-child{border-right: none;}
-            a{
-                align-items: center;
-                &::after{
-                    display: block;
-                    text-align: left;
-                    padding-left: 50px;
-                }
-                .icon-box{
-                    position: absolute;
-                    left: 15px;
-                    width: 30px;
-                    height: 30px;
-                    margin-bottom: 0;
-                }
-                span{
-                    font-size: 14px;
-                    text-align: left;
-                    padding-left: 50px;
-                }
-            }
-        }
-    }
-}
-
-.container{padding-left: 0;}
-.title{font-size: 48px;padding: 120px 0 30px 0;}
-.title-wrap{padding-bottom: 20px;}
-
-.portfolio-wrap{
+  .container {
     padding-left: 0;
-}
-ul.portfolio-list{
+  }
+  .title {
+    font-size: 48px;
+    padding: 120px 0 30px 0;
+  }
+  .title-wrap {
+    padding-bottom: 20px;
+  }
+  .personal {
+    ul.btnlist {
+      grid-template-columns: repeat(1, 1fr); // 將內容分成3等份
+    }
+  }
+
+  .portfolio-wrap {
+    padding-left: 0;
+  }
+  ul.portfolio-list {
     padding-top: 10px;
     li .pop-wrap .inner-page {
-        padding: 30px 20px;
-        .overflow{height: calc(100% - 45px);}
-        .title{font-size: 30px;padding: 0 50px 20px 0;text-align: left;}
+      padding: 30px 20px;
+      .overflow {
+        height: calc(100% - 45px);
+      }
+      .title {
+        font-size: 30px;
+        padding: 0 50px 20px 0;
+        text-align: left;
+      }
     }
+  }
 }
-
-
-
-}
-
-
 
 @media screen and (max-width: 768px) {
+  h3 {
+    font-size: 20px;
+  }
 
-h3{font-size: 20px;}
-
-ul.portfolio-list li{
+  ul.portfolio-list li {
     width: 100%;
-    .pop-wrap .inner-page{
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
+    .pop-wrap .inner-page {
+      width: 100%;
+      height: 100%;
+      border-radius: 0;
     }
-}
+  }
 
-.personal {
+  .personal {
     flex-wrap: wrap;
-    .dfc{
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px dashed #ddd;
-        padding-bottom: 20px;
+    ul.contact {
+      width: auto;
     }
-    .fontbox{
-        width: auto;
-        padding-left: 0;
-        padding-top: 20px;
+    ul.btnlist p {
+      text-align: center;
     }
-    ul.contact{
-        width: auto;
-    }
-    .tag{text-align: center;}
-    ul.btnlist p{text-align: center;}
-}
+  }
 
-
-ul.skill-list > li{
+  ul.skill-list > li {
     width: 100%;
     padding: 20px 0;
     border-right: none;
     border-bottom: 1px dashed #ddd;
-    &:last-child{border-bottom: none;}
-}
-
-#footer {
-    ul.footer-contact{
-        flex-wrap: wrap;
-        li{width: 100%;justify-content: center;padding: 5px 0;}
+    &:last-child {
+      border-bottom: none;
     }
+  }
+
+  #footer {
+    ul.footer-contact {
+      flex-wrap: wrap;
+      li {
+        width: 100%;
+        justify-content: center;
+        padding: 5px 0;
+      }
+    }
+  }
+
+  .note-wrap {
+    padding-bottom: 0;
+  }
 }
-
-.note-wrap{padding-bottom: 0;}
-
-}
-
-
-
 
 @media screen and (max-width: 500px) {
+  .edit-block {
+    padding: 20px 3%;
+    margin-bottom: 30px;
+  }
 
-.edit-block{padding: 20px 3%;margin-bottom: 30px;}
-
-p{font-size: 15px;}
-h6{font-size: 13px;}
-ul.preset, ol.preset{
+  p {
     font-size: 15px;
-    li{padding: 4px 0;}
-}
+  }
+  h6 {
+    font-size: 13px;
+  }
+  ul.preset,
+  ol.preset {
+    font-size: 15px;
+    li {
+      padding: 4px 0;
+    }
+  }
 
-#menu{
+  #menu {
     padding: 0;
     ul.menu-list li a {
-        .icon-box{
-            position: relative;
-            left: 0;
-            margin-right: 5px;
-            width: 25px;
-            height: 25px;
-            i{font-size: 16px;}
+      .icon-box {
+        position: relative;
+        left: 0;
+        margin-right: 5px;
+        width: 25px;
+        height: 25px;
+        i {
+          font-size: 16px;
         }
-        &::after{
-            font-size: 12px;
-            color: #fff;
-            width: auto;
-            padding-left: 0;
-        }
-        span{display: none;}
+      }
+      &::after {
+        font-size: 12px;
+        color: #fff;
+        width: auto;
+        padding-left: 0;
+      }
+      span {
+        display: none;
+      }
     }
-}
+  }
 
-.title{
+  .title {
     font-size: 32px;
     padding: 90px 0 15px 0;
-}
-.subtitle{font-size: 24px;}
-.title-wrap .links{padding-bottom: 0;}
+  }
+  .title-wrap .links {
+    padding-bottom: 0;
+  }
 
-ul.portfolio-list li {
-    .pop-wrap .inner-page{
-        padding: 30px 10px;
-        .title{
-            font-size: 20px;
-            padding: 0 40px 20px 0;
-            font-weight: bold;
-        }
-        .remove{
-            right: 10px;
-            width: 35px;
-            height: 35px;
-        }
+  ul.portfolio-list li {
+    .pop-wrap .inner-page {
+      padding: 30px 10px;
+      .title {
+        font-size: 20px;
+        padding: 0 40px 20px 0;
+        font-weight: bold;
+      }
+      .remove {
+        right: 10px;
+        width: 35px;
+        height: 35px;
+      }
     }
+  }
 }
-
-    
-}
-
 
 @media screen and (max-width: 400px) {
-
-      
-a.btn{font-size: 14px;padding: 10px 15px;}
-h3{font-size: 18px;}
-ul.portfolio-list li .font-box{padding: 20px 10px;}
-.edit-block{border-radius: 10px;}
-.personal ul.btnlist {
+  a.btn {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  ul.portfolio-list li .font-box {
+    padding: 20px 10px;
+  }
+  .edit-block {
+    border-radius: 10px;
+  }
+  .personal ul.btnlist {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    p{width: 100%;}
-    li{
-        margin: 2px 5px;
+    p {
+      width: 100%;
     }
-}
-ul.preset li{
+    li {
+      margin: 2px 5px;
+    }
+  }
+  ul.preset li {
     font-size: 14px;
-    span.note{
+    span.note {
+      font-size: 12px;
+      margin-top: 4px;
+      ul > li {
         font-size: 12px;
-        margin-top: 4px;
-        ul > li{font-size: 12px;}
+      }
     }
-}
-
+  }
 }

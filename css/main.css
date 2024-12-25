@@ -416,7 +416,8 @@ h6 {
 }
 
 h5.quest {
-  margin-top: 2em;
+  font-size: 1.3em;
+  margin-top: 1em;
   margin-bottom: 0.5em;
 }
 
@@ -426,6 +427,10 @@ p.ans {
 
 .mb-2 {
   margin-bottom: 0.5em;
+}
+
+.mb-4 {
+  margin-bottom: 1em;
 }
 
 @keyframes fade-in {
@@ -487,13 +492,6 @@ input,
 
 .bold {
   font-weight: bold;
-}
-
-.dfc {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
 }
 
 a {
@@ -594,20 +592,12 @@ span.highlight {
 .title {
   font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
-  font-weight: 300;
-  font-size: 4em;
+  font-weight: 700;
+  font-size: 3em;
   color: #bd9d8a;
   letter-spacing: 1px;
   text-align: center;
   padding: 100px 0 30px 0;
-}
-
-.subtitle {
-  font-weight: 500;
-  font-size: 2em;
-  color: #bd9d8a;
-  word-spacing: 5px;
-  padding: 25px 0;
 }
 
 .title-wrap {
@@ -621,31 +611,12 @@ span.highlight {
   padding-bottom: 20px;
 }
 
-.tag {
-  font-size: 1em;
-}
-.tag .text-center {
-  text-align: center;
-}
-.tag span {
-  display: inline-block;
-  padding: 8px 12px;
-  background-color: #bd9d8a;
-  color: #fff;
-  border-radius: 5px;
-}
-
 .personal {
   width: 100%;
   display: flex;
   align-items: stretch;
   align-content: center;
   justify-content: center;
-}
-.personal .dfc {
-  width: 300px;
-  flex-wrap: wrap;
-  border-right: 1px dashed #ddd;
 }
 .personal .dfc h2,
 .personal .dfc h5,
@@ -666,7 +637,20 @@ span.highlight {
   letter-spacing: 1px;
 }
 .personal .dfc h5 {
-  color: #bd9d8a;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.personal .dfc h5 span {
+  display: inline-block;
+  font-weight: normal;
+  margin: 0.15em;
+  font-size: 0.9em;
+  color: white;
+  background: #bd9d8a;
+  padding: 0.5em;
+  border-radius: 0.25em;
 }
 .personal ul.contact {
   font-size: 0.9em;
@@ -694,6 +678,7 @@ span.highlight {
 }
 .personal .imgbox {
   width: 150px;
+  margin: 0 auto;
   border: 1px solid #ddd;
   border-radius: 100%;
   overflow: hidden;
@@ -702,19 +687,23 @@ span.highlight {
   width: 100%;
   height: auto;
 }
-.personal .fontbox {
-  width: calc(100% - 300px);
-  padding-left: 3%;
-}
-.personal .fontbox ul.preset {
-  margin-bottom: 24px;
+.personal ul.btnlist {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5em;
+  width: 100%;
 }
 .personal ul.btnlist p {
   padding: 10px 0;
 }
 .personal ul.btnlist li {
-  display: inline-flex;
-  margin: 2px 0;
+  width: 100%;
+}
+.personal ul.btnlist li a.btn {
+  width: 100%;
+  padding: 1.5em;
+  font-size: 1.2em;
+  border-radius: 0.5em;
 }
 
 table {
@@ -1036,49 +1025,6 @@ a.go-btn:hover i {
 }
 
 @media screen and (max-width: 1024px) {
-  #menu {
-    width: 100%;
-    height: auto;
-    padding: 0 20px;
-    background: #000;
-  }
-  #menu .burger {
-    display: none;
-  }
-  #menu ul.menu-list {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #menu ul.menu-list li {
-    width: 33.3333333333%;
-    margin-bottom: 0;
-    border-right: 1px solid #999;
-  }
-  #menu ul.menu-list li:last-child {
-    border-right: none;
-  }
-  #menu ul.menu-list li a {
-    align-items: center;
-  }
-  #menu ul.menu-list li a::after {
-    display: block;
-    text-align: left;
-    padding-left: 50px;
-  }
-  #menu ul.menu-list li a .icon-box {
-    position: absolute;
-    left: 15px;
-    width: 30px;
-    height: 30px;
-    margin-bottom: 0;
-  }
-  #menu ul.menu-list li a span {
-    font-size: 14px;
-    text-align: left;
-    padding-left: 50px;
-  }
   .container {
     padding-left: 0;
   }
@@ -1088,6 +1034,9 @@ a.go-btn:hover i {
   }
   .title-wrap {
     padding-bottom: 20px;
+  }
+  .personal ul.btnlist {
+    grid-template-columns: repeat(1, 1fr);
   }
   .portfolio-wrap {
     padding-left: 0;
@@ -1122,22 +1071,8 @@ a.go-btn:hover i {
   .personal {
     flex-wrap: wrap;
   }
-  .personal .dfc {
-    width: 100%;
-    border-right: none;
-    border-bottom: 1px dashed #ddd;
-    padding-bottom: 20px;
-  }
-  .personal .fontbox {
-    width: auto;
-    padding-left: 0;
-    padding-top: 20px;
-  }
   .personal ul.contact {
     width: auto;
-  }
-  .personal .tag {
-    text-align: center;
   }
   .personal ul.btnlist p {
     text-align: center;
@@ -1174,10 +1109,12 @@ a.go-btn:hover i {
   h6 {
     font-size: 13px;
   }
-  ul.preset, ol.preset {
+  ul.preset,
+  ol.preset {
     font-size: 15px;
   }
-  ul.preset li, ol.preset li {
+  ul.preset li,
+  ol.preset li {
     padding: 4px 0;
   }
   #menu {
@@ -1205,9 +1142,6 @@ a.go-btn:hover i {
   .title {
     font-size: 32px;
     padding: 90px 0 15px 0;
-  }
-  .subtitle {
-    font-size: 24px;
   }
   .title-wrap .links {
     padding-bottom: 0;
